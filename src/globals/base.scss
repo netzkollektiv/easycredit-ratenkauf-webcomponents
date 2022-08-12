@@ -1,5 +1,6 @@
 @import 'functions';
 
+$ec-base-url: 'https://ratenkauf.easycredit.de/api/resource/webcomponents/v3';
 // Variables
 // - Colors
 $ec-primary: #F37122;
@@ -313,7 +314,7 @@ $circle-secondary: '<svg width="330" height="331" viewBox="0 0 330 331" fill="no
 
 // Logos
 .logo-ratenkauf {
-  background-image: url(http://159.69.33.205:6006/src/components/easycredit-base/assets/ratenkauf-logo.svg);
+  background-image: url(#{$ec-base-url}/easycredit-components/assets/ratenkauf-logo.svg);
   background-position: left center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -323,11 +324,11 @@ $circle-secondary: '<svg width="330" height="331" viewBox="0 0 330 331" fill="no
 }
 .logo-ratenkauf-white {
   @extend .logo-ratenkauf;
-  background-image: url(http://159.69.33.205:6006/src/components/easycredit-base/assets/ratenkauf-logo-white.svg);
+  background-image: url(#{$ec-base-url}/easycredit-components/assets/ratenkauf-logo-white.svg);
 }
 
 .logo-finanzgruppe {
-  background-image: url(http://159.69.33.205:6006/src/components/easycredit-base/assets/logo-finanzgruppe.svg);
+  background-image: url(#{$ec-base-url}/easycredit-components/assets/logo-finanzgruppe.svg);
   background-position: left center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -337,7 +338,7 @@ $circle-secondary: '<svg width="330" height="331" viewBox="0 0 330 331" fill="no
 }
 .logo-finanzgruppe-white {
   @extend .logo-finanzgruppe;
-  background-image: url(http://159.69.33.205:6006/src/components/easycredit-base/assets/logo-finanzgruppe-white.svg);
+  background-image: url(#{$ec-base-url}/easycredit-components/assets/logo-finanzgruppe-white.svg);
 }
 
 // Content Images
@@ -346,7 +347,7 @@ $circle-secondary: '<svg width="330" height="331" viewBox="0 0 330 331" fill="no
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(http://159.69.33.205:6006/src/components/easycredit-base/assets/motiv-online-floor.jpg);
+  background-image: url(#{$ec-base-url}/easycredit-components/assets/motiv-online-floor.jpg);
 }
 
 // Circles

@@ -1,4 +1,5 @@
 import { Component, Prop, h } from '@stencil/core';
+import { applyAssetsUrl, getAssetUrl } from '../../utils/utils';
 
 @Component({
   tag: 'easycredit-logo',
@@ -10,9 +11,13 @@ export class EasycreditLogo {
 
   @Prop({ mutable: true }) alt: string = 'easyCredit-Ratenkauf - Einfach. Fair. In Raten zahlen.';
 
+  connectedCallback() {
+    applyAssetsUrl(EasycreditLogo)
+  }
+
   render() { 
     return ([
-      <img src="http://159.69.33.205:6006/src/components/easycredit-base/assets/ratenkauf-logo.svg" alt={this.alt} />
+      <img src={getAssetUrl('/easycredit-components/assets/ratenkauf-logo.svg')} alt={this.alt} />
     ])
   }
 }

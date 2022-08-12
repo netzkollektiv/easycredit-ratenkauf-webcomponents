@@ -1,4 +1,5 @@
 import { Component, Method, Prop, h } from '@stencil/core';
+import { applyAssetsUrl, getAssetUrl } from '../../utils/utils';
 
 @Component({
   tag: 'easycredit-box-modal',
@@ -12,6 +13,10 @@ export class EasycreditBoxModal {
   @Prop({mutable: true}) snoozeFor: number
   @Prop({mutable: true}) delay: number
   @Prop({mutable: true}) isOpen: boolean = false
+
+  connectedCallback() {
+    applyAssetsUrl(EasycreditBoxModal)
+  }
 
   async componentWillLoad () {
     if (this.delay > 0 && !this.isSnoozed()) {
@@ -32,7 +37,7 @@ export class EasycreditBoxModal {
 
   backgroundSrc() {
     if (!this.src) {
-      return 'http://159.69.33.205:6006/src/components/easycredit-base/assets/motiv-online-floor.jpg'
+      return getAssetUrl('/easycredit-components/assets/motiv-online-floor.jpg')
     } else {
       return this.src
     }

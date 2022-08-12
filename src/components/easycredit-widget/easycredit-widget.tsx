@@ -1,6 +1,6 @@
 import { Component, Prop, State, h } from '@stencil/core';
-
 import { formatAmount, fetchInstallmentPlans } from '../../utils/utils';
+import { applyAssetsUrl } from '../../utils/utils';
 
 @Component({
   tag: 'easycredit-widget',
@@ -55,6 +55,10 @@ export class EasycreditWidget {
     
   }
 
+  connectedCallback() {
+    applyAssetsUrl(EasycreditWidget)
+  }
+  
   componentWillLoad() {
     this.isValid = false
     fetchInstallmentPlans(this.webshopId, this.amount).then((data) => {

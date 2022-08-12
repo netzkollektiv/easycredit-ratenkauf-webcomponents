@@ -254,4 +254,11 @@
       margin-top: 10px;
     }
   }
+
+  // Rules for IE10 and above
+  @media all and (-ms-high-contrast:none) {
+    easycredit-checkout-installments { display: none; }
+    .ec-checkout__totals { display: none; }
+    .ec-checkout__small-print { display: none; }
+  }
 }

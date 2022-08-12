@@ -1,4 +1,5 @@
 import { Component, Method, Prop, State, h } from '@stencil/core';
+import { applyAssetsUrl, getAssetUrl } from '../../utils/utils';
 
 @Component({
   tag: 'easycredit-box-listing',
@@ -15,9 +16,13 @@ export class EasycreditBoxListing {
     this.isOpen = !this.isOpen
   }
 
+  connectedCallback() {
+    applyAssetsUrl(EasycreditBoxListing)
+  }
+
   backgroundSrc() {
     if (!this.src) {
-      return 'http://159.69.33.205:6006/src/components/easycredit-base/assets/motiv-online-floor.jpg'
+      return getAssetUrl('/easycredit-components/assets/motiv-online-floor.jpg')
     } else {
       return this.src
     }

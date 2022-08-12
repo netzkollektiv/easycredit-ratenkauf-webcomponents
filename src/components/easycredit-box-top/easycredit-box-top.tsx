@@ -1,4 +1,5 @@
 import { Component, State, h } from '@stencil/core';
+import { applyAssetsUrl } from '../../utils/utils';
 
 @Component({
   tag: 'easycredit-box-top',
@@ -10,6 +11,10 @@ export class EasycreditBoxTop {
 
   @State() slideIndex = 0
   @State() isScrolled = false
+
+  connectedCallback() {
+    applyAssetsUrl(EasycreditBoxTop)
+  }
 
   componentWillLoad() {
 

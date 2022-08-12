@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default                                                       |
-| -------- | --------- | ----------- | -------- | ------------------------------------------------------------- |
-| `alt`    | `alt`     |             | `string` | `'ratenkauf by easyCredit - Einfach. Fair. In Raten zahlen.'` |
+| Property | Attribute | Description | Type     | Default                                                    |
+| -------- | --------- | ----------- | -------- | ---------------------------------------------------------- |
+| `alt`    | `alt`     |             | `string` | `'easyCredit-Ratenkauf - Einfach. Fair. In Raten zahlen.'` |
 
 
 ----------------------------------------------

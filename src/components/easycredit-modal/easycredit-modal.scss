@@ -2,7 +2,7 @@
     position: fixed;
     left: 50%;
     top: 50%;
-    z-index: 3001;
+    z-index: 10001;
     transform: translate(-50%, -50%);
 
     display: none;
@@ -10,11 +10,11 @@
     max-width: 90vw;
     height: auto;
     min-height: 200px;
-    max-height: 90vh;
+    max-height: 95vh;
     padding: 50px 30px 30px;
     box-sizing: border-box;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     background-color: $white;
     border-radius: $border-radius-xxl;
