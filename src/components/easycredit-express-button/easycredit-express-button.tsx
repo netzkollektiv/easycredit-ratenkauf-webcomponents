@@ -197,10 +197,9 @@ export class EasycreditExpressButton {
         return;
     }
     if (
-        this.installments && (
-          this.amount < this.installments.minFinancingAmount ||
-          this.amount > this.installments.maxFinancingAmount
-        )
+        !this.installments ||
+        this.amount < this.installments.minFinancingAmount ||
+        this.amount > this.installments.maxFinancingAmount
     ) {
         return;
     }
